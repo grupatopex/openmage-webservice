@@ -1,0 +1,21 @@
+{
+    "name": "gtx/openmage-webservice",
+    "license": ["MIT"],
+    "type": "magento-module",
+    "description": "Sample OpenMage module for GTX webservice authorization.",
+    "keywords": ["composer-installer", "magento", "openmage", "grupatopex"],
+    "authors": [
+        {
+            "name": "Tomasz Gregorczyk",
+            "email": "t.gregorczyk@grupatopex.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "symfony/http-client": "*"
+    },
+    "extra": {
+        "magento-root-dir": "source/"
+    }
+}

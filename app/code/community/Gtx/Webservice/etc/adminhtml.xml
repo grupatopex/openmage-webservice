@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<adminhtml>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <gtx_webservice translate="title" module="gtx_webservice">
+                                        <title>Webservice</title>
+                                        <sort_order>1200</sort_order>
+                                    </gtx_webservice>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</adminhtml>

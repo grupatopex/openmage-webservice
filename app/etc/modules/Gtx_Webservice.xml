@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Gtx_Webservice>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Gtx_Webservice>
+    </modules>
+</config>
