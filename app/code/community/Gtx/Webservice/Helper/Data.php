@@ -2,7 +2,7 @@
 /**
  * @author Tomasz Gregorczyk <t.gregorczyk@grupatopex.com>
  */
-class Gtx_Webservice_Helper_Data
+class Gtx_Webservice_Helper_Data extends Mage_Core_Helper_Abstract
 {
     /**
      * @var string

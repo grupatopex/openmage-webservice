@@ -1,5 +1,6 @@
 {
     "name": "gtx/openmage-webservice",
+    "version": "1.0.1",
     "license": ["MIT"],
     "type": "magento-module",
     "description": "Sample OpenMage module for GTX webservice authorization.",

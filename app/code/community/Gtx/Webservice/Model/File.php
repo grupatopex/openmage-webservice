@@ -1,6 +1,7 @@
 <?php
 
 use Symfony\Component\HttpClient\CurlHttpClient;
+use Symfony\Component\HttpClient\Exception\TransportException;
 
 class Gtx_Webservice_Model_File
 {
@@ -22,6 +23,7 @@ class Gtx_Webservice_Model_File
      *
      * @param string $url The URL to download the file from.
      * @param string $filePath The path to save the downloaded file.
+     * @return void
      * @throws \RuntimeException If the file cannot be downloaded or saved.
      */
     public function download($url, $filePath)
@@ -39,6 +41,27 @@ class Gtx_Webservice_Model_File
         } catch (\Throwable $e) {
             throw new \RuntimeException('Failed to download the file: ' . $e->getMessage(), $e->getCode(), $e);
         }
+    }
+
+    /**
+     * Get file from URL and return its content
+     *
+     * @param string $url The URL to get the file from.
+     * @return string
+     * @throws TransportException If the file cannot be fetched
+     */
+    public function fetch($url)
+    {
+        $options = [
+            'auth_ntlm' => [
+                'username' => Mage::helper('gtx_webservice')->getUsername(),
+                'password' => Mage::helper('gtx_webservice')->getPassword(),
+            ]
+        ];
+
+        $response = $this->httpClient->request('GET', $this->encodeURI($url), $options);
+
+        return $response->getContent();
     }
 
     /**
